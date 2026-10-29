@@ -14,10 +14,10 @@ database_id = "1a00b01e-ff02-450a-b733-0d2bdfc04c25" # 你的database_id
 [vars]
 # FORWARD_RULES="[{"prefix":"vip","email":"a@example.com"},{"prefix":"*","email":"example@qq.com"}]"
 ADMIN_NAME="admin"
-ADMIN_PASSWORD="yys"
-GUEST_PASSWORD="guest"
-JWT_TOKEN="dfvhluhdaslufhvdv"
-JWT_TOKENGUEST_PASSWORD="dfsfsfxzcv"
+# ADMIN_PASSWORD 用 `wrangler secret put ADMIN_PASSWORD` 设置（不要写进本文件）
+GUEST_PASSWORD="guest"  # 弱口令：任何人可登访客模式；建议改强并走 secret
+# JWT_TOKEN 用 `wrangler secret put JWT_TOKEN` 设置（超管直通令牌，泄露=丢整个邮箱后台）
+# JWT_TOKENGUEST_PASSWORD 同上，用 secret 存
 SESSION_EXPIRE_DAYS="365"
 MAIL_DOMAIN="edukg.kdns.fr"
 RESEND_API_KEY="RESEND发件密钥"
